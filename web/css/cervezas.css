@@ -1,0 +1,29 @@
+.w3-card{
+  width: 30%;
+  margin: 10px;
+}
+
+.imgCard{
+  width: 100%;
+}
+
+.tituloCerveza{
+  margin-bottom: 0px;
+}
+
+p.poblacion_pais{
+  margin-top: 0px;
+}
+
+.contenedorTipo{
+  overflow: hidden;
+}
+
+.tipoCerveza{
+  margin-right: 25px;
+  float:left;
+}
+
+.importacionCerveza{
+  overflow: hidden;
+}
