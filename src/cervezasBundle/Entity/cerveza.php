@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="cerveza")
  * @ORM\Entity(repositoryClass="cervezasBundle\Repository\cervezaRepository")
  */
-class cerveza
+class Cerveza
 {
     /**
      * @var int
@@ -100,7 +100,7 @@ class cerveza
      *
      * @param string $nombre
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setNombre($nombre)
     {
@@ -124,7 +124,7 @@ class cerveza
      *
      * @param string $pais
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setPais($pais)
     {
@@ -148,7 +148,7 @@ class cerveza
      *
      * @param string $poblacion
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setPoblacion($poblacion)
     {
@@ -172,7 +172,7 @@ class cerveza
      *
      * @param string $tipo
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setTipo($tipo)
     {
@@ -196,7 +196,7 @@ class cerveza
      *
      * @param boolean $importacion
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setImportacion($importacion)
     {
@@ -220,7 +220,7 @@ class cerveza
      *
      * @param integer $tamanyo
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setTamanyo($tamanyo)
     {
@@ -244,7 +244,7 @@ class cerveza
      *
      * @param \DateTime $fechaAlmacen
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setFechaAlmacen($fechaAlmacen)
     {
@@ -268,7 +268,7 @@ class cerveza
      *
      * @param integer $cantidad
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setCantidad($cantidad)
     {
@@ -292,7 +292,7 @@ class cerveza
      *
      * @param string $foto
      *
-     * @return cerveza
+     * @return Cerveza
      */
     public function setFoto($foto)
     {
@@ -311,4 +311,3 @@ class cerveza
         return $this->foto;
     }
 }
-

@@ -8,21 +8,23 @@
   </head>
   <body>
     <div class="w3-card">
-      <img class="imgCard" src="https://estaticos.muyinteresante.es/media/cache/1000x460_thumb/uploads/images/gallery/5548e20641444aef0ed38df6/beneficios-cerveza13.jpg" alt="Cerveza">
+      <img class="imgCard" src="{{cerveza.foto}}" alt="Cerveza">
       <div class="w3-container">
-        <h3 class="tituloCerveza">Nombre cerveza</h3>
-        <p class="poblacion_pais">Población - País</p>
+        <h3 class="tituloCerveza">{{cerveza.nombre}}</h3>
+        <p class="poblacion_pais">{{cerveza.poblacion}} - {{cerveza.pais}}</p>
         <div class="contenedorTipoCerveza">
           <div class="tipoCerveza">
-            <h4>Tipo</h4>
+            <h4>{{cerveza.tipo}}</h4>
           </div>
           <div class="importacionCerveza">
-            <p>(De importación)</p>
+            {% if cerveza.importacion == true %}
+              <p>(De importación)</p>
+            {% endif %}
           </div>
         </div>
-        <p><strong>Tamaño: </strong>-</p>
-        <p><strong>Fecha: </strong>10-10-2017</p>
-        <p>50 unidades (cantidad)</p>
+        <p><strong>Tamaño: </strong>{{cerveza.tamanyo}}</p>
+        <p><strong>Fecha: </strong>{{cerveza.fechaAlmacen|date('Y-m-d')}}</p>
+        <p>{{cerveza.cantidad}} unidades</p>
       </div>
     </div>
   </body>

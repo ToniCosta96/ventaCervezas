@@ -4,6 +4,7 @@ namespace cervezasBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use cervezasBundle\Entity\Cerveza;
 
 class DefaultController extends Controller
 {
@@ -20,6 +21,8 @@ class DefaultController extends Controller
      */
     public function listaCervezasAction()
     {
-        return $this->render('cervezasBundle:Default:cervezas.html.twig');
+        $repository = $this->getDoctrine()->getRepository(Cerveza::class);
+        $cerveza = $repository->find(1);
+        return $this->render('cervezasBundle:Default:cervezas.html.twig',array('cerveza'=>$cerveza));
     }
 }
