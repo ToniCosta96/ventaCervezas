@@ -7,25 +7,29 @@
     <link rel="stylesheet" href="{{asset('css/cervezas.css')}}">
   </head>
   <body>
-    <div class="w3-card">
-      <img class="imgCard" src="{{cerveza.foto}}" alt="Cerveza">
-      <div class="w3-container">
-        <h3 class="tituloCerveza">{{cerveza.nombre}}</h3>
-        <p class="poblacion_pais">{{cerveza.poblacion}} - {{cerveza.pais}}</p>
-        <div class="contenedorTipoCerveza">
-          <div class="tipoCerveza">
-            <h4>{{cerveza.tipo}}</h4>
+    <div class="contenedorCervezas">
+      {% for cerveza in cervezas %}
+      <div class="w3-card">
+        <img class="imgCard" src="{{cerveza.foto}}" alt="Cerveza">
+        <div class="w3-container">
+          <h3 class="tituloCerveza">{{cerveza.nombre}}</h3>
+          <p class="poblacion_pais">{{cerveza.poblacion}} - {{cerveza.pais}}</p>
+          <div class="contenedorTipoCerveza">
+            <div class="tipoCerveza">
+              <h4>{{cerveza.tipo}}</h4>
+            </div>
+            <div class="importacionCerveza">
+              {% if cerveza.importacion == true %}
+                <p>(De importación)</p>
+              {% endif %}
+            </div>
           </div>
-          <div class="importacionCerveza">
-            {% if cerveza.importacion == true %}
-              <p>(De importación)</p>
-            {% endif %}
-          </div>
+          <p><strong>Tamaño: </strong>{{cerveza.tamanyo}}</p>
+          <p><strong>Fecha: </strong>{{cerveza.fechaAlmacen|date('Y-m-d')}}</p>
+          <p>{{cerveza.cantidad}} unidades</p>
         </div>
-        <p><strong>Tamaño: </strong>{{cerveza.tamanyo}}</p>
-        <p><strong>Fecha: </strong>{{cerveza.fechaAlmacen|date('Y-m-d')}}</p>
-        <p>{{cerveza.cantidad}} unidades</p>
       </div>
+      {% endfor %}
     </div>
   </body>
 </html>

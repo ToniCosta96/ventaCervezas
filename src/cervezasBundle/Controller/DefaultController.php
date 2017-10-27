@@ -22,7 +22,17 @@ class DefaultController extends Controller
     public function listaCervezasAction()
     {
         $repository = $this->getDoctrine()->getRepository(Cerveza::class);
-        $cerveza = $repository->find(1);
-        return $this->render('cervezasBundle:Default:cervezas.html.twig',array('cerveza'=>$cerveza));
+        $cervezas = $repository->findAll();
+        return $this->render('cervezasBundle:Default:cervezas.html.twig',array('cervezas'=>$cervezas));
+    }
+
+    /**
+     * @Route("/listaCervezas/id/{id}", name="listaCervezasId")
+     */
+    public function listaCervezasIdAction($id)
+    {
+        $repository = $this->getDoctrine()->getRepository(Cerveza::class);
+        $cervezas = array('cervezas'=>$repository->find($id));
+        return $this->render('cervezasBundle:Default:cervezas.html.twig',array('cervezas'=>$cervezas));
     }
 }

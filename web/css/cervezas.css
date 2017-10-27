@@ -1,10 +1,16 @@
+.contenedorCervezas{
+  overflow: hidden;
+}
+
 .w3-card{
   width: 30%;
   margin: 10px;
+  float:left;
 }
 
 .imgCard{
   width: 100%;
+  /*height: 225px;*/
 }
 
 .tituloCerveza{
@@ -15,7 +21,7 @@ p.poblacion_pais{
   margin-top: 0px;
 }
 
-.contenedorTipo{
+.contenedorTipoCerveza{
   overflow: hidden;
 }
 
