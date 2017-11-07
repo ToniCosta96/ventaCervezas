@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/listaCervezas", name="listaCervezas")
+     * @Route("/listaCervezas", name="lista_cervezas")
      */
     public function listaCervezasAction()
     {
@@ -27,7 +27,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/listaCervezas/id/{id}", name="listaCervezasId")
+     * @Route("/listaCervezas/id/{id}", name="lista_cervezas_id")
      */
     public function listaCervezasIdAction($id)
     {
